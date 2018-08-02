@@ -4,5 +4,4 @@
 * Sass 
 * React 
 * Redux 
-* React
-* Redux
+* React and Redux
