@@ -7,12 +7,11 @@ Then create a reducer called messageReducer() that handles the state for the mes
 
 ```js
 // define ADD, addMessage(), messageReducer(), and store here:
+
+// action type
 const ADD = 'ADD';
 
-const prevState = {
-  messages: []
-}
-
+//action creator
 function addMessage(msg){
   return {
     type: ADD,
@@ -20,14 +19,18 @@ function addMessage(msg){
   }
 }
 
-const messageReducer = (state=prevState,action) => {
-  switch(action.type){
-    case ADD:
-    return [...state, action.message]
-    break;
-    default:
-    return state
-  }
+//reducer
+function messageReducer (previousState, action) {
+  return [...previousState, action.message];
 }
 
-const store = Redux.createStore(messageReducer)
+//store
+let store = {
+  state: [],
+  getState: () => store.state,
+  dispatch: (action) => {
+    if(action.type === ADD) {
+      store.state = messageReducer(store.state,action)
+    }
+  }
+};
