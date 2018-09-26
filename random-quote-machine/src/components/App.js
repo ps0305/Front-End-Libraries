@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import React from 'react';
+import { Provider } from 'react-redux';
+import QuoteBox from './quoteBox';
+import store from '../Reducer/index';
 
-class App extends Component {
-    render(){
-        return(
-            <div>
-                <Header/>
-                <Footer/>
-            </div>
-        )
-    }
-}
+const App = () => (
+    <Provider store={store}>
+        <QuoteBox />
+    </Provider>
+);
+    
 export default App;

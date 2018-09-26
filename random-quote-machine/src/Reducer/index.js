@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 
 import quoteReducer from './reducer';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window._REDUX_DEVTOOLS_EXTENSION_COMPOSE_ || compose;
 const PREV_STATE = {
   error: '',
   loading: true,

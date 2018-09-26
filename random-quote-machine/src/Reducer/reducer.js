@@ -5,7 +5,7 @@ import {
 } from '../actionTypes/actionTypes'
 
 export default ( state = {} ,{ type, payload}) => {
-    switch(acctions.type) {
+    switch(type) {
         case QUOTE_FETCHING:
         return {
             ...state, ...{loading: true, error:''}
