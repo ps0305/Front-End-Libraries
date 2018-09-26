@@ -1,16 +1,16 @@
-import randomColor from 'randomcolor';
+//import randomColor from 'randomcolor';
 import {
-    QUOTE_FETCHING,
+    //QUOTE_FETCHING,
     QUOTE_FETCH_SUCCESS,
     QUOTE_FETCH_ERROR
-} from './actionTypes/actionTypes'
+} from '../actionTypes/actionTypes'
 
 const fetchSuccess = ({ quote:text,author,cat:category }) => ({
     type:QUOTE_FETCH_SUCCESS,
-    payload: {
+   /* payload: {
         background: randomColor(),
         quote: { text,author,category}
-    }
+    }*/
 })
 
 const fetchError = ({message}) => ({
@@ -22,11 +22,17 @@ const fetchError = ({message}) => ({
 });
 
 const getQuote = () => async dispatch => {
-    const API_URL = "Some url";
+    const API_URL = "https://gist.githubusercontent.com/ps0305/19cc96b267ede04c774972b8b524f179/raw/e3868e1a4cff8d7e989da314babb91f302918f09/quotes.json";
 
     try {
-        dispatch(fetchingQuote());
+       // dispatch(fetchingQuote());
 
-        const quote await (aw)
+        const quote = await (await(API_URL)).json();
+        dispatch(fetchSuccess(quote));
+    }
+    catch (error) {
+        dispatch(fetchError(error));
     }
 }
+
+export default getQuote;

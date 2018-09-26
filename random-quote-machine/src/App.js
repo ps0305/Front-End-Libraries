@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
+import Quote from './components/quoteBox';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        Random quote machine
+        <Quote/>
       </div>
     );
   }
