@@ -18,9 +18,10 @@ In this exercise, you will learn to set up the Node.js environment, a popular Ja
 * Open a terminal window on your machine. If you are using a Windows machine, open a cmd window or PowerShell window with admin privileges.
 * To ensure that your NodeJS setup is working correctly, type the following at the command prompt to check for the version of Node and NPM
 
+![image](https://user-images.githubusercontent.com/34129569/46287517-6c775800-c5a0-11e8-826a-cfac198f677c.png)
+
+
 ```js
 node -v
-      
-
 npm -v
 ```
