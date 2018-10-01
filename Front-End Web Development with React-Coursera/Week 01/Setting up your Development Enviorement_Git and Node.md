@@ -112,7 +112,6 @@ git log --oneline
     </body>
 </html>
 ```
-
 * Add a sub-folder named templates to your git-test folder, and then add a file named test.html to the templates folder. Then set the contents of this file to be the same as the index.html file above.
 * Then check the status and add all the files to the staging area.
 * Then do the second commit to your repository
@@ -133,20 +132,17 @@ git log --oneline
 Checking out a file from an earlier commit
 * To check out the index.html from the second commit, find the number of the second commit using the git log, and then type the following at the prompt:
 ```js
-git checkout <second commit's number> index.html
+git checkout <second commits number> index.html
 ```
 #### Resetting the Git repository
 * To discard the effect of the previous operation and restore index.html to its state at the end of the third commit, type:
 ```js
 git reset HEAD index.html
 ```
-
 * Then type the following at the prompt:
 ```js
 git checkout -- index.html
 ```
-
-
 * You can also use git reset to reset the staging area to the last commit without disturbing the working directory.
 
 
