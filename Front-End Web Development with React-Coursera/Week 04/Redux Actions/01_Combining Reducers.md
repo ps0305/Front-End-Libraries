@@ -31,7 +31,7 @@ export const Comments = (state = COMMENTS, action) => {
 ```
 
 * Similarly, create a new file named `promotions.js` and add the following to it:
-
+```js
 import { PROMOTIONS } from '../shared/promotions';
 
 export const Promotions = (state = PROMOTIONS, action) => {
