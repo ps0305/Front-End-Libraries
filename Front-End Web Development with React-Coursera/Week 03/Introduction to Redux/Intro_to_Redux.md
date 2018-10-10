@@ -69,8 +69,10 @@ const store = ConfigureStore();
 . . .
 ```
 
-* Finally, update MainComponent.js to connect it to Redux store and use it:
-
+* Finally, update `MainComponent.js` to connect it to Redux store and use it:
+<details>
+    <summary>View Code</summary>
+    
 ```js
 . . .
 
@@ -128,5 +130,6 @@ const mapStateToProps = state => {
 export default withRouter(connect(mapStateToProps)(Main));
 
 ```
+</details>
 
 * Save all the changes and do a Git commit with the message "Intro. to Redux".
