@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const API_KEY = AIzaSyB3a9E4BzF3u_LpOhB8pkiYrfK3iYZNgHw;
+
 class App extends Component {
   render() {
     return (
