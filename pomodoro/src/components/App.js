@@ -11,6 +11,9 @@ class App extends Component {
   constructor () {
     super ()
     this.state = {
+      timerId: 0,
+      timerRunning: false,
+      currentTime: "25 : 00",
       cycle: "Session",
       workTime: 25,
       breakTime: 5,
