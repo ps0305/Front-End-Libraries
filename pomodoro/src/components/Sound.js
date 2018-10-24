@@ -9,7 +9,7 @@ export default class Sound extends Component {
     }
     render() {
         return (
-            <button onClick={this.toggleSound}> SOUND </button>
+            <button className="btn btn-primary" onClick={this.toggleSound}> SOUND </button>
         )
     }
 }

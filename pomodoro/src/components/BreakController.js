@@ -4,9 +4,9 @@ export default class BreakController extends Component {
   render() {
     return (
       <div>
-        <button> + </button>
+        <button className="btn btn-outline-success"> + </button>
         <span> /BREAKTIME/ </span>
-        <button> - </button>
+        <button className="btn btn-outline-warning"> - </button>
       </div>
     );
   }
