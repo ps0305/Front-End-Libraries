@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../App.css";
 import Timer from "./Timer";
-import TimerControllers from "./TimerControllers";
+import TimeController from "./TimeController";
 import Sound from "./Sound";
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
       <div className="main">
         <h1>Pomodoro Clock</h1>
         <Timer />
-        <TimerControllers />
+        <TimeController />
         <Sound />
       </div>
     );
