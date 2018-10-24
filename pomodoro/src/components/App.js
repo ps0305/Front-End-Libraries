@@ -5,26 +5,7 @@ import TimeController from "./TimeController";
 import Sound from "./Sound";
 
 
-incrementWorkTime = () => {
-  this.setState({
-    workTime : this.state.workTime + 1
-  })
-}
-decrementWorkTime = () => {
-  this.setState({
-    workTime : this.state.workTime - 1
-  })
-}
-incrementBreakTime = () => {
-  this.setState({
-    breakTime : this.state.breakTime + 1
-  })
-}
-decrementBreakTime = () => {
-  this.setState({
-    breakTime : this.state.breakTime - 1
-  })
-}
+
 
 class App extends Component {
   constructor () {
@@ -35,12 +16,35 @@ class App extends Component {
       breakTime: 5,
       sound: "on"
     }
+    
   }
   setSound = (sound) => {
     this.setState({
       sound: sound
     })
   }
+
+  incrementWorkTime = () => {
+    this.setState({
+      workTime : this.state.workTime + 1
+    })
+  }
+  decrementWorkTime = () => {
+    this.setState({
+      workTime : this.state.workTime - 1
+    })
+  }
+  incrementBreakTime = () => {
+    this.setState({
+      breakTime : this.state.breakTime + 1
+    })
+  }
+  decrementBreakTime = () => {
+    this.setState({
+      breakTime : this.state.breakTime - 1
+    })
+  }
+  
   render() {
     return (
       <div className="main">
