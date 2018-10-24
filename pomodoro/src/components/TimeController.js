@@ -6,8 +6,15 @@ export default class TimeController extends Component {
   render() {
     return (
       <div className="timer-controllers">
-        <WorkController />
-        <BreakController />
+        <WorkController
+        WorkTime={this.props.WorkTime}
+        incrementWorkTime={this.props.incrementWorkTime}
+        decrementWorkTime={this.props.decrementWorkTime} />
+        <BreakController
+        breakTime={this.props.breakTime}
+        incrementBreakTime={this.props.incrementBreakTime}
+        decrementBreakTime={this.props.decrementWorkTime}
+         />
       </div>
     );
   }
