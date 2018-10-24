@@ -1,5 +1,5 @@
 .main {
-  height: 450px;
+  height: 550px;
   width: 500px;
   background-color: salmon;
   margin-left: 350px;
@@ -17,6 +17,7 @@ h1 {
 .timer-controllers {
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 10px
 
 }
 
@@ -34,8 +35,4 @@ h1 {
   margin: auto;
   
 
-}
-span{
-  display: inline-block;
-  text-align: center;
 }

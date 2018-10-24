@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class WorkControllers extends Component {
+export default class WorkController extends Component {
 
   handleWorkIncrement = () => {
     this.props.incrementWorkTime()
