@@ -1,6 +1,42 @@
 import React, { Component } from "react";
 
 export default class Timer extends Component {
+
+  startTimer = (duration) => {
+    this.setState({
+      timerRunning: true
+    })
+    let time = duration * 60
+    let minutes;
+    let seconds;
+    let runningTimer = setInterval(() => {
+      this.setState({
+        timerId: runningTimer
+      })
+      minutes = Math.floor(time / 60)
+      seconds = time - minutes * 60
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+      this.setState({currentTime: `${minutes} : ${seconds}`})
+      if (time === 0) {
+        if(this.state.cycle === "Session"){
+          this.setState({
+            cycle: "Break",
+            timerRunning: false
+          })
+          clearInterval(this.state.timerId)
+          this.startTimer(this.state.breakTime)
+        }else{
+          this.setState({
+            cycle: "Session",
+            timerRunning: false
+          })
+          clearInterval(this.state.timerId)
+          this.startTimer(this.state.workTime)
+        }
+      }
+    },1000)
+  }
   timer = () => {
     if (this.props.timerRunning === true) {
       clearInterval(this.props.timerId)
