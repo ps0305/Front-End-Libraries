@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       timerId: 0,
       timerRunning: false,
-      currentTime: "25 : 00",
+      CurrentTime: "25 : 00",
       cycle: "Session",
       workTime: 25,
       breakTime: 5,
@@ -52,7 +52,7 @@ class App extends Component {
       }
     },1000);
   }
-  
+
   setSound = sound => {
     this.setState({
       sound: sound
@@ -84,7 +84,7 @@ class App extends Component {
     return (
       <div className="main">
         <h1>Pomodoro Clock</h1>
-        <Timer />
+        <Timer startTimer={this.startTimer}/>
         <TimeController
           workTime={this.state.workTime}
           breakTime={this.state.breakTime}
