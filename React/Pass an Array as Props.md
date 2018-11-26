@@ -25,14 +25,14 @@ When rendering each List from the ToDo component, pass in a tasks property assig
 for example ["walk dog", "workout"]. Then access this tasks array in the List component, showing its value within the p element. 
 Use join(", ") to display the props.tasksarray in the p element as a comma separated list. 
 Today's list should have at least 2 tasks and tomorrow's should have at least 3 tasks.
-
+```js
 const List= (props) => {
   { /* change code below this line */ }
   return <p>{props.tasks.join(', ')}</p>
   { /* change code above this line */ }
 };
 
-```js
+
 class ToDo extends React.Component {
   constructor(props) {
     super(props);
@@ -45,7 +45,7 @@ class ToDo extends React.Component {
         { /* change code below this line */ }
         <List tasks= { ["walk dog", "workout"] } />
         <h2>Tomorrow</h2>
-        <List tasks= { ["biking","hanging","wandering"] } />
+        <List tasks= { ["eat", "code", "sleep", "repeat"] } />
         { /* change code above this line */ }
       </div>
     );
